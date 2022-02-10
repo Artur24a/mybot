@@ -10,6 +10,10 @@ const roundMatch = (max,min) => {
     return Math.round(min - 0.5 + Math.random() * (max-min+1));
 };
 
+if (text === '/start'){
+    bot.sendMessage(chatId, 'Добро пожаловать в телеграм бот компании Ниагара');
+}
+
 bot.on('message', msg =>{
     const {id: id, first_name: userName} = msg.chat;
 
